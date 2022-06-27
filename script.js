@@ -199,10 +199,11 @@ async function showRecipe(mealId){
     mealEl.innerHTML = `
             <h2>${meal.strMeal}</h2>
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-
+            <h3>Instuctions:</h3>
             <p>
                 ${meal.strInstructions}
             </p>
+            <h3>Ingredients:</h3>
             <ul>
                 ${ingredients.map(ing => 
                     `<li>
