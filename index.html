@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <header>
+            <div>
+                <button class="homepage"><i class="fa-solid fa-house"></i></button>
+                <button class="bars"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <ul class="sidebar">
+                <li>Favorite</li>
+                <li>History</li>
+            </ul>
+            <div>
+                <input type="text" class="search-term">
+                <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </header>
+        <div class="food-category">
+            <ul class="categoryList">
+
+            </ul>
+        </div>
+        <div class="meals">
+
+        </div>
+    </div>
+    <div class="popup-container hidden">
+        <div class="popup">
+            <button class="popup-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="meal-info"></div>
+        </div>
+    </div>
+</body>
+
+</html>
