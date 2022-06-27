@@ -172,6 +172,17 @@ function getHistoryMealLS(){
     return mealIds === null ? [] : mealIds;
 }
 
+async function searchMeal() {
+    mealsEl.innerHTML = '';
+    const search = searchTerm.value;
+    const meals = await searchingMeal(search);
+    if (meals) {
+        meals.forEach(meal => {
+            addMeal(meal);
+        })
+    }
+}
+
 
 async function showRecipe(mealId){
     const meal = await getMealById(mealId);
@@ -216,16 +227,7 @@ categoryList.addEventListener('click', async (e) => {
     })
 })
 
-searchBtn.addEventListener('click', async () => {
-    mealsEl.innerHTML = '';
-    const search = searchTerm.value;
-    const meals = await searchingMeal(search);
-    if (meals) {
-        meals.forEach(meal => {
-            addMeal(meal);
-        })
-    }
-})
+searchBtn.addEventListener('click', searchMeal);
 
 sidebarClose.addEventListener('click', () => {
     if (sidebar.classList.contains('active')) {
@@ -253,4 +255,11 @@ homepage.addEventListener('click', getRandomMeal);
 
 popupClose.addEventListener('click', () => {
     popup.classList.add('hidden');
+})
+
+// 優化鍵盤
+searchTerm.addEventListener('keypress', (e) => {
+    if(e.key === "Enter"){
+        searchMeal();
+    }
 })
