@@ -115,8 +115,7 @@ header .search{
 }
 
 .food-category {
-    padding: 0 20px;
-    margin-right: 20px;
+    padding: 0;
     text-align: center;
     overflow-x: scroll;
     background-color: rgb(221, 249, 253);
@@ -131,10 +130,6 @@ header .search{
 .categoryList li {
     margin-right: 20px;
     cursor: pointer;
-}
-
-.categoryList:last-child{
-    margin-right: 0;
 }
 
 .categoryList li img {
