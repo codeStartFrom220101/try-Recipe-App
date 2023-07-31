@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    display: none;
 }
 
 ::-webkit-scrollbar-button {
@@ -51,9 +50,9 @@ body {
 }
 
 .mobile-container {
-    box-shadow: 0 0 10px 2px #3333331A;
     background: white;
     max-width: 400px;
+    width: 100%;
 }
 
 header {
@@ -116,7 +115,8 @@ header .search{
 }
 
 .food-category {
-    padding: 1rem 0;
+    padding: 0 20px;
+    margin-right: 20px;
     text-align: center;
     overflow-x: scroll;
     background-color: rgb(221, 249, 253);
@@ -131,6 +131,10 @@ header .search{
 .categoryList li {
     margin-right: 20px;
     cursor: pointer;
+}
+
+.categoryList:last-child{
+    margin-right: 0;
 }
 
 .categoryList li img {

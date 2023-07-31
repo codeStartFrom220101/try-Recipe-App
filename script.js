@@ -12,6 +12,17 @@ const mealInfoEl = document.querySelector('.meal-info');
 
 getRandomMeal();
 makeCategoryList();
+// tryGetMeal();
+// async function tryGetMeal() {
+//     try {
+//         const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+//         const respData = await resp.json();
+//         const randomMeal = respData.meals[0]
+//         addMeal(randomMeal, true);
+//     } catch (error) {
+//         console.log('失敗');
+//     }
+// }
 
 async function getRandomMeal() {
     const resp = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
@@ -67,7 +78,6 @@ function addCategoryList(categoryData) {
 
 
 function addMeal(mealData, random = false) {
-    console.log(mealData);
     const meal = document.createElement('div');
     meal.classList.add('meal');
     meal.innerHTML = `
